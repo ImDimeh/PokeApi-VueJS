@@ -11,19 +11,26 @@
   </div>
   <section class="main_content">
     <h1 class="background-name"> Flareon</h1>
-    <div>
-      <a> taille</a>
-      <a> poids</a>
-    </div>
-    
-    <img v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png'">
-    <div>
-      <a> Bio</a>
-      <a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, beatae corporis et soluta
-         repudiandae earum eum molestias ipsum laudantium ex, blanditiis ducimus incidunt alias rem
-          expedita nihil doloremque veniam assumenda quibusdam, magnam accusamus necessitatibus nemo a
-          d totam. Aliquam natus exercitationem illo fugiat dolorem harum quam veniam
-        </a>
+    <div class="main_infos">
+
+      <div>
+        <a> taille</a>
+        <a> poids</a>
+      </div>
+      
+      <img v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png'">
+      <div>
+        <div>
+          <img v-bind:src="'https://www.pokepedia.fr/images/7/76/Ic%C3%B4ne_Type_Feu_EV.png'" alt="">
+          
+        </div>
+        <a> Bio</a>
+        <a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, beatae corporis et soluta
+           repudiandae earum eum molestias ipsum laudantium ex, blanditiis ducimus incidunt alias rem
+            expedita nihil doloremque veniam assumenda quibusdam, magnam accusamus necessitatibus nemo a
+            d totam. Aliquam natus exercitationem illo fugiat dolorem harum quam veniam
+          </a>
+      </div>
     </div>
 
   </section>
@@ -72,12 +79,31 @@ section.poke-card {
 
   }
 }
-.background-name{
- color: #8A0917;
- font-weight: bold;
- font-size: 140px;
- text-align: center;
- letter-spacing: 10px;
+section.main_content{
+  background-color: transparent;
+  width: 90vw;
+  height: 60vh;
+
+  div.main_infos{
+    height: 70%;
+    widows: 100%;
+    background-color: transparent;
+    z-index: 2;
+  }
+  .background-name{
+    // je position mon background name
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   color: #8A0917;
+   font-weight: bold;
+   font-size: 140px;
+   text-align: center;
+   letter-spacing: 10px;
+   z-index: 1;
+  }
 }
 
 </style>
