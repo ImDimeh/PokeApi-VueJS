@@ -9,7 +9,24 @@
       <img v-bind:src="'src/assets/logo-pokedex.png'">
     </div>
   </div>
+  <section class="main_content">
+    <h1 class="background-name"> Flareon</h1>
+    <div>
+      <a> taille</a>
+      <a> poids</a>
+    </div>
+    
+    <img v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png'">
+    <div>
+      <a> Bio</a>
+      <a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, beatae corporis et soluta
+         repudiandae earum eum molestias ipsum laudantium ex, blanditiis ducimus incidunt alias rem
+          expedita nihil doloremque veniam assumenda quibusdam, magnam accusamus necessitatibus nemo a
+          d totam. Aliquam natus exercitationem illo fugiat dolorem harum quam veniam
+        </a>
+    </div>
 
+  </section>
 
 </section>
 </template>
@@ -18,6 +35,10 @@
 export default {
   name: "MaquetteView"
 }
+const flareon = await fetch('https://pokeapi.co/api/v2/pokemon/flareon').then(res => res.json())
+console.log(flareon.sprites.front_default)
+
+
 </script>
 
 <style lang="scss">
@@ -51,6 +72,12 @@ section.poke-card {
 
   }
 }
-
+.background-name{
+ color: #8A0917;
+ font-weight: bold;
+ font-size: 140px;
+ text-align: center;
+ letter-spacing: 10px;
+}
 
 </style>
