@@ -13,9 +13,10 @@
     <h1 class="background-name"> Flareon</h1>
     <div class="main_infos">
 
-      <div>
-        <a> taille</a>
-        <a> poids</a>
+      <div class="size_weight">
+        <a> <strong>Taille</strong> : 90cm</a><br>
+        <a> <strong>Poids</strong>  :  25kg</a>
+        
       </div>
       
       <img v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png'">
@@ -24,7 +25,7 @@
           <img v-bind:src="'https://www.pokepedia.fr/images/7/76/Ic%C3%B4ne_Type_Feu_EV.png'" alt="">
           
         </div>
-        <a> Bio</a>
+        <a> Bio</a><br>
         <a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, beatae corporis et soluta
            repudiandae earum eum molestias ipsum laudantium ex, blanditiis ducimus incidunt alias rem
             expedita nihil doloremque veniam assumenda quibusdam, magnam accusamus necessitatibus nemo a
@@ -49,6 +50,9 @@ console.log(flareon.sprites.front_default)
 </script>
 
 <style lang="scss">
+strong{
+  font-weight: bold;
+}
 section.poke-card {
   background-color: #B22F30;
   height: 95vh;
@@ -80,7 +84,7 @@ section.poke-card {
   }
 }
 section.main_content{
-  background-color: transparent;
+  background-color: #00000020;
   width: 90vw;
   height: 60vh;
 
@@ -89,6 +93,28 @@ section.main_content{
     widows: 100%;
     background-color: transparent;
     z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .size_weight  {
+      
+      width: 25%;
+      margin-top: 20%;
+      margin-right: 70px;
+      margin-left: 20px;
+      a{
+        
+      color: white;
+      font-size: 15px;
+ 
+      }
+      
+      
+      
+    }
   }
   .background-name{
     // je position mon background name
