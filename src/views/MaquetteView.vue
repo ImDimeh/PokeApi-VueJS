@@ -19,7 +19,7 @@
         
       </div>
       
-     <img  class="pokemon_sprite" v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png'">
+     <img  class="pokemon_sprite" v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png'">
       <div class="bio_type">
         <div>
           <img v-bind:src="'src/assets/Miniature_Type_Feu_GO-removebg-preview.png'" alt="">
@@ -43,8 +43,9 @@
 export default {
   name: "MaquetteView"
 }
-const flareon = await fetch('https://pokeapi.co/api/v2/pokemon/flareon').then(res => res.json())
-console.log(flareon.sprites.front_default)
+const flareon = await fetch('https://pokeapi.co/api/v2/pokemon/ditto').then(res => res.json())
+console.log(flareon.sprites.other['official-artwork'].front_default
+)
 
 
 </script>
@@ -132,25 +133,33 @@ section.main_content{
       
     }
     .pokemon_sprite{
-      width: 100%;
-      height: 100%;
+      width: 60%;
+      height: auto;
       
       background-repeat: no-repeat;
       background-size: cover;
       
      
-      margin-top: 10%;
+      margin-top: 5%;
 
       
     }
     .bio_type{
-      width: 60%;
+      margin-left: 5%;
+      width: 40%;
       
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      
+      height: 60%;
       div img{
         width: 100px;
         height: 100px;
-        margin: 20px 0px 20px 70px;
+      margin: 20px 0;
       }
       a{
         color: white;
@@ -173,7 +182,7 @@ section.main_content{
   .background-name{
     // je position mon background name
       position: absolute;
-    top: 30%;
+    
     left: 50%;
     transform: translate(-70%, -80%);
     color: #8A0917;
