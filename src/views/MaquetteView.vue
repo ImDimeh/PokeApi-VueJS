@@ -19,10 +19,10 @@
         
       </div>
       
-      <img v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png'">
-      <div>
+     <img  class="pokemon_sprite" v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png'">
+      <div class="bio_type">
         <div>
-          <img v-bind:src="'https://www.pokepedia.fr/images/7/76/Ic%C3%B4ne_Type_Feu_EV.png'" alt="">
+          <img v-bind:src="'src/assets/Miniature_Type_Feu_GO-removebg-preview.png'" alt="">
           
         </div>
         <a> Bio</a><br>
@@ -53,10 +53,16 @@ console.log(flareon.sprites.front_default)
 strong{
   font-weight: bold;
 }
+div#app{
+  background-color: #2e7aa9;
+}
 section.poke-card {
   background-color: #B22F30;
   height: 95vh;
   padding: 70px 60px;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 
   div.head {
     display: flex;
@@ -85,11 +91,11 @@ section.poke-card {
 }
 section.main_content{
   background-color: #00000020;
-  width: 90vw;
-  height: 60vh;
+  width: 100%;
+  height: 65vh;
 
   div.main_infos{
-    height: 70%;
+    height: 100%;
     widows: 100%;
     background-color: transparent;
     z-index: 2;
@@ -102,8 +108,8 @@ section.main_content{
     .size_weight  {
       
       width: 25%;
-      margin-top: 20%;
-      margin-right: 70px;
+      margin-top: 5%;
+      margin-right: 80px;
       margin-left: 20px;
       a{
         
@@ -114,6 +120,37 @@ section.main_content{
       
       
       
+    }
+    .pokemon_sprite{
+      width: 100%;
+      height: 100%;
+      
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+     
+      margin-top: 10%;
+
+      transform: translate(-10%);
+    }
+    .bio_type{
+      width: 60%;
+      
+      height: 100%;
+      div img{
+        width: 100px;
+        height: 100px;
+        margin: 20px 0px 20px 70px;
+      }
+      a{
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      img{
+        width: 50px;
+        height: 50px;
+      }
     }
   }
   .background-name{
