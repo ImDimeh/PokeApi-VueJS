@@ -54,13 +54,13 @@ strong{
   font-weight: bold;
 }
 div#app{
-  background-color: #2e7aa9;
+  background-color: #B22F30;
 }
 section.poke-card {
   background-color: #B22F30;
   height: 95vh;
   padding: 70px 60px;
-  width: 960px;
+  width:100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -81,6 +81,11 @@ section.poke-card {
       font-size: 1.5rem;
       color: #fff;
     }
+    a:hover{
+        color: white;
+        background-color: transparent;
+        
+      }
 
   }
   div img {
@@ -90,7 +95,7 @@ section.poke-card {
   }
 }
 section.main_content{
-  background-color: #00000020;
+  
   width: 100%;
   height: 65vh;
 
@@ -109,13 +114,18 @@ section.main_content{
       
       width: 25%;
       margin-top: 5%;
-      margin-right: 80px;
+      
       margin-left: 20px;
       a{
         
       color: white;
       font-size: 15px;
  
+      }
+      a:hover{
+        color: white;
+        background-color: transparent;
+        
       }
       
       
@@ -131,7 +141,7 @@ section.main_content{
      
       margin-top: 10%;
 
-      transform: translate(-10%);
+      
     }
     .bio_type{
       width: 60%;
@@ -146,6 +156,13 @@ section.main_content{
         color: white;
         font-size: 13px;
         font-weight: bold;
+        
+      }
+      
+      a:hover{
+        color: white;
+        background-color: transparent;
+        
       }
       img{
         width: 50px;
@@ -155,17 +172,16 @@ section.main_content{
   }
   .background-name{
     // je position mon background name
-    position: absolute;
+      position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-   color: #8A0917;
-   font-weight: bold;
-   font-size: 140px;
-   text-align: center;
-   letter-spacing: 10px;
-   z-index: 1;
+    transform: translate(-70%, -80%);
+    color: #8A0917;
+    font-weight: bold;
+    font-size: 140px;
+    text-align: center;
+    letter-spacing: 10px;
+    z-index: 1;
   }
 }
 
