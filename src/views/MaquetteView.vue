@@ -64,14 +64,12 @@ section.poke-card {
   width:100%;
   margin-left: auto;
   margin-right: auto;
-
   div.head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-
   div.name-number {
     display: flex;
     flex-direction: column;
@@ -87,30 +85,25 @@ section.poke-card {
         background-color: transparent;
         
       }
-
   }
   div img {
     width: 150px;
     height: 40px;
-
   }
 }
 section.main_content{
   
   width: 100%;
   height: 65vh;
-
   div.main_infos{
     height: 100%;
     widows: 100%;
     background-color: transparent;
     z-index: 2;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     .size_weight  {
       
       width: 25%;
@@ -141,7 +134,6 @@ section.main_content{
       
      
       margin-top: 5%;
-
       
     }
     .bio_type{
@@ -187,11 +179,52 @@ section.main_content{
     transform: translate(-70%, -80%);
     color: #8A0917;
     font-weight: bold;
-    font-size: 140px;
+    font-size: 9vw;
     text-align: center;
     letter-spacing: 10px;
     z-index: 1;
   }
 }
 
+@media screen and (max-width: 768px) {
+  
+  section.main_content
+  
+  {
+    .background-name {
+   
+    left: 55%;
+    transform: translate(-70%, -80%);
+    color: #8A0917;
+    font-weight: bold;
+    font-size: 9vw;
+    text-align: center;
+    letter-spacing: 10px;
+    z-index: 1;
+}
+    div.main_infos 
+    {
+      .size_weight {
+    width: 25%;
+    margin-top: 5%;
+     margin-left: 0; 
+}
+    .bio_type {
+
+    div img {
+      width: 70px;
+      height: 70px;
+      margin: 20px 0;
+  }
+  a {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+  }
+
+  
+}}}
+      
 </style>
