@@ -226,5 +226,53 @@ section.main_content{
 
   
 }}}
+
+
+@media screen and (max-width: 640px) {
+  section.main_content{
+    height: auto;
+    
+
+    .background-name {
+    left: 55%;
+    transform: translate(-55%, 0%);
+    
+    font-weight: bold;
+    font-size: 15vw;
+    text-align: center;
+    letter-spacing: 10px;
+    z-index: 1;
+}
+div.main_infos {
+    height: auto;
+    widows: 100%;
+    background-color: transparent;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #B22F30;
+
+    .size_weight {
+    width: 25%;
+    margin-top: 5%;
+    margin-left: 0;
+    order: 1;
+}
+.pokemon_sprite {
+    width: 100%;
+    
+}
+}
+  
+}
+
+  section.poke-card {
+    padding: 10px;
+
+  }
+}
       
 </style>
