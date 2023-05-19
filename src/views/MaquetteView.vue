@@ -250,16 +250,29 @@ div.main_infos {
     z-index: 2;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+   justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     background-color: #B22F30;
 
+    .bio_type{
+      order: 3;
+      a {
+        text-align: left;
+      }
+    }
     .size_weight {
-    width: 25%;
+        width: 25%;
     margin-top: 5%;
     margin-left: 0;
-    order: 1;
+    order: 2;
+    
+    height: 300px;
+    padding-top: 25%;
+   
+    padding: auto;
+   
+
 }
 .pokemon_sprite {
     width: 100%;
