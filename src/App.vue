@@ -12,6 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/type">TYPE</RouterLink>
         <RouterLink to="/gen">génération</RouterLink>
         <RouterLink to="/maquette">maquette de base </RouterLink>
+        <RouterLink to="/maquetteDynamique/:id">maquette dynamique </RouterLink>
 
 
       </nav>
