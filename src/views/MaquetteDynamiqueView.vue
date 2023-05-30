@@ -1,8 +1,16 @@
+<script setup>
+
+// console.log(route.params.id)
+// const poke = await fetch('https://pokeapi.co/api/v2/pokemon/'+ route.params.id ).then(res => res.json())
+// console.log(poke)
+
+
+</script>
 <template>
 <section class="poke-card">
   <div class="head">
     <div class="name-number">
-      <a>#ID</a>
+      <a> #</a>
       <a>Name</a>
     </div>
     <div>
@@ -36,12 +44,24 @@
 </section>
 </template>
 
+
 <script>
+
+import { useRoute } from 'vue-router'
+const route = useRoute()
+
 export default {
-  name: "maquetteDynamique"
+  name: "maquetteDynamiqueView",
+  id: null ,
+  
+  mounted() {
+    
+    this.id = this.$route.params.id
+   console.log(this.id)
+  },
 }
-let id = this.$route.query.id
-print(id)
+
+
 
 
 </script>

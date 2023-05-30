@@ -24,8 +24,8 @@ const router = createRouter({
     },
     {
       path: '/maquetteDynamique/:id',
-      name: 'maquetteDynamique',
-      component: () => import('../views/MaquetteDynamiqueView .vue')
+      name: 'maquetteDynamiqueView',
+      component: () => import('../views/MaquetteDynamiqueView.vue')
     }
   ]
 })
