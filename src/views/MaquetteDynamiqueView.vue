@@ -47,19 +47,38 @@
 
 <script>
 
+
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
 export default {
   name: "maquetteDynamiqueView",
-  id: null ,
-  
-  mounted() {
-    
-    this.id = this.$route.params.id
-   console.log(this.id)
+  data() {
+    return {
+      id: null ,
+      poke: null,
+    }
   },
+  
+methods: {
+  async getPokemon() {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+ this.$route.params.id)
+    const data = await response.json()
+    console.log(data)
+    return data
+  }
+  },
+  async mounted() {
+    console.log(this.$route.params.id)
+    this.poke = await this.getPokemon()
+    console.log(this.poke )
+  },
+
+    
+    
+  
 }
+
 
 
 
