@@ -10,31 +10,31 @@
 <section class="poke-card">
   <div class="head">
     <div class="name-number">
-      <a> #</a>
-      <a>Name</a>
+      <a>  # {{ this.poke.id }}</a>
+      <a> {{ this.poke.name }}</a>
     </div>
     <div>
       <img v-bind:src="'src/assets/logo-pokedex.png'">
     </div>
   </div>
   <section class="main_content">
-    <h1 class="background-name"> Name</h1>
+    <h1 class="background-name"> {{ this.poke.name }}</h1>
     <div class="main_infos">
 
       <div class="size_weight">
-        <a> <strong>Taille</strong> : Size</a><br>
-        <a> <strong>Poids</strong>  :  weight</a>
+        <a> <strong>Taille</strong> : {{ this.poke.height }}</a><br>
+        <a> <strong>Poids</strong>  :  {{ this.poke.weight }} </a>
         
       </div>
       
-     <img  class="pokemon_sprite" v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png'">
+     <img  class="pokemon_sprite" v-bind:src="this.Image">
       <div class="bio_type">
         <div>
           <img v-bind:src="'src/assets/Miniature_Type_Feu_GO-removebg-preview.png'" alt="">
           
         </div>
         <a> Bio</a><br>
-        <a> Bio value
+        <a> {{ this.description  }}
           </a>
       </div>
     </div>
@@ -57,6 +57,8 @@ export default {
     return {
       id: null ,
       poke: null,
+      description: null,
+      Image: null,
     }
   },
   
@@ -64,14 +66,25 @@ methods: {
   async getPokemon() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+ this.$route.params.id)
     const data = await response.json()
-    console.log(data)
+    console.log(data.sprites.other['official-artwork'].front_default)
     return data
-  }
   },
-  async mounted() {
+  async getDescription() {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ this.$route.params.id)
+    const data = await response.json()
+  
+    
+    return data.flavor_text_entries[0].flavor_text
+  },
+  },
+  async created() {
     console.log(this.$route.params.id)
+   
     this.poke = await this.getPokemon()
-    console.log(this.poke )
+    this.description = await this.getDescription()
+    this.Image = this.poke.sprites.other['official-artwork'].front_default
+    console.log(this.poke.sprites.other['official-artwork'].front_default)
+   
   },
 
     
