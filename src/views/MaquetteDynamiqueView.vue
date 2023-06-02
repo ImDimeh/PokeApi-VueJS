@@ -48,6 +48,7 @@
 <script>
 
 
+
 import { useRoute } from 'vue-router'
 const route = useRoute()
 
@@ -66,7 +67,7 @@ methods: {
   async getPokemon() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+ this.$route.params.id)
     const data = await response.json()
-    console.log(data.sprites.other['official-artwork'].front_default)
+    
     return data
   },
   async getDescription() {
@@ -76,6 +77,13 @@ methods: {
     
     return data.flavor_text_entries[0].flavor_text
   },
+  async GetbackgroundColor() {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ this.$route.params.id)
+    const data = await response.json()
+  
+    
+    return data.color.name
+  },
   },
   async created() {
     console.log(this.$route.params.id)
@@ -83,11 +91,16 @@ methods: {
     this.poke = await this.getPokemon()
     this.description = await this.getDescription()
     this.Image = this.poke.sprites.other['official-artwork'].front_default
-    console.log(this.poke.sprites.other['official-artwork'].front_default)
+    
+    const pokeCard = document.querySelector('section.poke-card')
+    pokeCard.style.backgroundColor = await this.GetbackgroundColor()
+    console.log(pokeCard.style.backgroundColor)
+    
    
   },
 
-    
+
+  
     
   
 }
@@ -103,7 +116,7 @@ strong{
   font-weight: bold;
 }
 div#app{
-  background-color: #B22F30;
+  //background-color: #B22F30;
 }
 section.poke-card {
   background-color: #B22F30;
