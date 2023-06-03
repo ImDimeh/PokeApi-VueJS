@@ -52,24 +52,24 @@
 import { useRoute } from 'vue-router'
 const route = useRoute()
 const pokemonColors = {
-  normal: "#A8A878",
+  normal: "#B8B1A9",
   fire: "#F08030",
-  water: "#6890F0",
-  electric: "#F8D030",
-  grass: "#78C850",
-  ice: "#98D8D8",
-  fighting: "#C03028",
+  water: "#227EE7",
+  electric: "#f5bf0b",
+  grass: "#3da224",
+  ice: "#77ddff",
+  fighting: "#915B4A",
   poison: "#A040A0",
-  ground: "#E0C068",
-  flying: "#A890F0",
-  psychic: "#F85888",
+  ground: "#92501b",
+  flying: "#4771c3",
+  psychic: "#963270",
   bug: "#A8B820",
-  rock: "#B8A038",
-  ghost: "#705898",
-  dragon: "#7038F8",
-  dark: "#705848",
-  steel: "#B8B8D0",
-  fairy: "#EE99AC"
+  rock: "#b0aa82",
+  ghost: "#703F70",
+  dragon: "#B0B3C9",
+  dark: "#50413f",
+  steel: "#5e9db2",
+  fairy: "pink"
 };
 
 export default {
@@ -163,10 +163,10 @@ section.poke-card {
     padding: 0 1rem;
     a {
       font-size: 1.5rem;
-      color: #fff;
+      color: #000000;
     }
     a:hover{
-        color: white;
+        color: rgb(0, 0, 0);
         background-color: transparent;
         
       }
@@ -197,12 +197,12 @@ section.main_content{
       margin-left: 20px;
       a{
         
-      color: white;
-      font-size: 15px;
+      color: rgb(0, 0, 0);
+      font-size: 30px;
  
       }
       a:hover{
-        color: white;
+        color: rgb(0, 0, 0);
         background-color: transparent;
         
       }
@@ -239,14 +239,14 @@ section.main_content{
       margin: 20px 0;
       }
       a{
-        color: white;
-        font-size: 13px;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
         font-weight: bold;
         
       }
       
       a:hover{
-        color: white;
+        color: rgb(0, 0, 0);
         background-color: transparent;
         
       }
