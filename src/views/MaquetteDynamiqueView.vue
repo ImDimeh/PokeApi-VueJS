@@ -95,8 +95,10 @@ methods: {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ this.$route.params.id)
     const data = await response.json()
   
-    
-    return data.flavor_text_entries[0].flavor_text
+    console.log(data.flavor_text_entries)
+    const result = data.flavor_text_entries.filter(word => word.language.name == "en" && word.version.name == "sword");
+    console.log(result)
+    return result[0].flavor_text
   },
   async GetbackgroundColor() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ this.$route.params.id)
@@ -264,7 +266,7 @@ section.main_content{
     transform: translate(-70%, -80%);
     color: #8A0917;
     font-weight: bold;
-    font-size: 9vw;
+    font-size: 7.5vw;
     text-align: center;
     letter-spacing: 10px;
     z-index: 1;
