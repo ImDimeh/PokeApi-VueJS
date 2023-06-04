@@ -71,6 +71,26 @@ const pokemonColors = {
   steel: "#5e9db2",
   fairy: "pink"
 };
+const pokemonTypeImage = {
+  normal: "https://archives.bulbagarden.net/media/upload/archive/3/39/20090401225821%21NormalIC_Big.png",
+  fire: "https://archives.bulbagarden.net/media/upload/thumb/a/a2/FireIC_SV.png/96px-FireIC_SV.png",
+  water: "https://archives.bulbagarden.net/media/upload/thumb/d/de/WaterIC_SV.png/96px-WaterIC_SV.png",
+  electric: "https://archives.bulbagarden.net/media/upload/thumb/7/77/ElectricIC_SV.png/96px-ElectricIC_SV.png",
+  grass: "https://archives.bulbagarden.net/media/upload/thumb/7/7b/GrassIC_SV.png/96px-GrassIC_SV.png",
+  ice: "https://archives.bulbagarden.net/media/upload/thumb/1/13/IceIC_SV.png/96px-IceIC_SV.png",
+  fighting: "https://archives.bulbagarden.net/media/upload/thumb/0/0f/FightingIC_SV.png/96px-FightingIC_SV.png",
+  poison: "https://archives.bulbagarden.net/media/upload/thumb/9/9d/PoisonIC_SV.png/96px-PoisonIC_SV.png",
+  ground: "https://archives.bulbagarden.net/media/upload/thumb/f/f8/GroundIC_SV.png/96px-GroundIC_SV.png",
+  flying: "https://archives.bulbagarden.net/media/upload/thumb/d/d7/FlyingIC_SV.png/96px-FlyingIC_SV.png",
+  psychic: "https://archives.bulbagarden.net/media/upload/thumb/9/96/PsychicIC_SV.png/96px-PsychicIC_SV.png",
+  bug: "https://archives.bulbagarden.net/media/upload/thumb/d/d1/BugIC_SV.png/96px-BugIC_SV.png",
+  rock: "https://archives.bulbagarden.net/media/upload/thumb/3/32/RockIC_SV.png/96px-RockIC_SV.png",
+  ghost: "https://archives.bulbagarden.net/media/upload/thumb/2/2c/GhostIC_SV.png/96px-GhostIC_SV.png",
+  dragon: "https://archives.bulbagarden.net/media/upload/thumb/7/7f/DragonIC_SV.png/96px-DragonIC_SV.png",
+  dark: "https://archives.bulbagarden.net/media/upload/thumb/3/30/DarkIC_SV.png/96px-DarkIC_SV.png",
+  steel: "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SteelIC_SV.png/96px-SteelIC_SV.png",
+  fairy: "https://archives.bulbagarden.net/media/upload/thumb/c/c6/FairyIC_SV.png/96px-FairyIC_SV.png"
+};
 
 export default {
   name: "maquetteDynamiqueView",
