@@ -29,8 +29,8 @@
       
      <img  class="pokemon_sprite" v-bind:src="this.Image">
       <div class="bio_type">
-        <div>
-          <img v-bind:src="'src/assets/Miniature_Type_Feu_GO-removebg-preview.png'" alt="">
+        <div class="type-img-list">
+          
           
         </div>
         <a> Bio</a><br>
@@ -147,7 +147,16 @@ methods: {
     
     const pokeCard = document.querySelector('section.poke-card')
     const color = await this.GetbackgroundColor()
-    console.log(this.poke.types[0].type.name)
+    
+    this.poke.types.forEach(type => {
+      console.log(type.type.name)
+      console.log(pokemonTypeImage[type.type.name])
+      const typeImage = document.createElement('img')
+      typeImage.src = pokemonTypeImage[type.type.name]
+      typeImage.alt = type.type.name
+      document.querySelector('.type-img-list').appendChild(typeImage)
+      
+    });
     console.log(color)
     pokeCard.style.backgroundColor = pokemonColors[this.poke.types[0].type.name]
     
@@ -265,11 +274,24 @@ section.main_content{
       text-align: center;
       
       height: 60%;
-      div img{
-        width: 100px;
+      div.type-img-list{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
         height: 100px;
-      margin: 20px 0;
-      }
+        
+
+
+
+        img{
+        width: 100px;
+        height: auto;
+      margin: 10px 0;
+      border: 1px solid black;
+      }}
       a{
         color: rgb(0, 0, 0);
         font-size: 15px;
