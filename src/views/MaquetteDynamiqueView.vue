@@ -115,10 +115,19 @@ methods: {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ this.$route.params.id)
     const data = await response.json()
   
-    console.log(data.flavor_text_entries)
-    const result = data.flavor_text_entries.filter(word => word.language.name == "en" && word.version.name == "sword");
+    
+    const result = data.flavor_text_entries.filter(word => word.language.name == "en" &&  ( word.version.name == "sword" || word.version.name == "white-2"));
     console.log(result)
     return result[0].flavor_text
+  },
+  async gettypeImage() {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+ this.$route.params.id)
+    const data = await response.json()
+  
+    console.log(data)
+    
+    
+    return data.types
   },
   async GetbackgroundColor() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ this.$route.params.id)
@@ -127,6 +136,7 @@ methods: {
     
     return data.color.name
   },
+  
   },
   async created() {
     console.log(this.$route.params.id)
