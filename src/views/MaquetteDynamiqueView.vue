@@ -1,8 +1,6 @@
 <script setup>
 
-// console.log(route.params.id)
-// const poke = await fetch('https://pokeapi.co/api/v2/pokemon/'+ route.params.id ).then(res => res.json())
-// console.log(poke)
+
 
 
 </script>
@@ -11,7 +9,7 @@
   <div class="head">
     <div class="name-number">
       <a>  # {{ this.poke.id }}</a>
-      <a> {{ this.poke.name }}</a>
+      <a > {{ this.poke.name }}</a>
     </div>
     <div>
       <img v-bind:src="'src/assets/logo-pokedex.png'">
@@ -51,46 +49,102 @@
 
 import { useRoute } from 'vue-router'
 const route = useRoute()
+
+
+
 const pokemonColors = {
-  normal: "#B8B1A9",
-  fire: "#F08030",
-  water: "#227EE7",
-  electric: "#f5bf0b",
-  grass: "#3da224",
-  ice: "#77ddff",
-  fighting: "#915B4A",
-  poison: "#A040A0",
-  ground: "#92501b",
-  flying: "#4771c3",
-  psychic: "#963270",
-  bug: "#A8B820",
-  rock: "#b0aa82",
-  ghost: "#703F70",
-  dragon: "#B0B3C9",
-  dark: "#50413f",
-  steel: "#5e9db2",
-  fairy: "pink"
+  normal: {
+    background: "#B8B1A9",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/archive/3/39/20090401225821%21NormalIC_Big.png"
+  },
+  fire: {
+    background: "#F08030",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/a/a2/FireIC_SV.png/96px-FireIC_SV.png"
+  },
+  water: {
+    background: "#227EE7",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/d/de/WaterIC_SV.png/96px-WaterIC_SV.png"
+  },
+  electric: {
+    background: "#f5bf0b",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/7/77/ElectricIC_SV.png/96px-ElectricIC_SV.png"
+  },
+  grass: {
+    background: "#3da224",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/7/7b/GrassIC_SV.png/96px-GrassIC_SV.png"
+  },
+  ice: {
+    background: "#77ddff",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/1/13/IceIC_SV.png/96px-IceIC_SV.png"
+  },
+  fighting: {
+    background: "#915B4A",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/0/0f/FightingIC_SV.png/96px-FightingIC_SV.png"
+  },
+  poison: {
+    background: "#A040A0",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/9/9d/PoisonIC_SV.png/96px-PoisonIC_SV.png"
+  },
+  ground: {
+    background: "#92501b",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/f/f8/GroundIC_SV.png/96px-GroundIC_SV.png"
+  },
+  flying: {
+    background: "#4771c3",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/d/d7/FlyingIC_SV.png/96px-FlyingIC_SV.png"
+  },
+  psychic: {
+    background: "#963270",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/9/96/PsychicIC_SV.png/96px-PsychicIC_SV.png"
+  },
+  bug: {
+    background: "#A8B820",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/d/d1/BugIC_SV.png/96px-BugIC_SV.png"
+  },
+  rock: {
+    background: "#b0aa82",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/3/32/RockIC_SV.png/96px-RockIC_SV.png"
+  },
+  ghost: {
+    background: "#703F70",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/2/2c/GhostIC_SV.png/96px-GhostIC_SV.png"
+  },
+  dragon: {
+    background: "#B0B3C9",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/7/7f/DragonIC_SV.png/96px-DragonIC_SV.png"
+  },
+  dark: {
+    background: "#50413f",
+    text: "#FFFFFF",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/3/30/DarkIC_SV.png/96px-DarkIC_SV.png"
+  },
+  steel: {
+    background: "#5e9db2",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SteelIC_SV.png/96px-SteelIC_SV.png"
+  },
+  fairy: {
+    background: "pink",
+    text: "#333333",
+    image: "https://archives.bulbagarden.net/media/upload/thumb/c/c6/FairyIC_SV.png/96px-FairyIC_SV.png"
+  }
 };
-const pokemonTypeImage = {
-  normal: "https://archives.bulbagarden.net/media/upload/archive/3/39/20090401225821%21NormalIC_Big.png",
-  fire: "https://archives.bulbagarden.net/media/upload/thumb/a/a2/FireIC_SV.png/96px-FireIC_SV.png",
-  water: "https://archives.bulbagarden.net/media/upload/thumb/d/de/WaterIC_SV.png/96px-WaterIC_SV.png",
-  electric: "https://archives.bulbagarden.net/media/upload/thumb/7/77/ElectricIC_SV.png/96px-ElectricIC_SV.png",
-  grass: "https://archives.bulbagarden.net/media/upload/thumb/7/7b/GrassIC_SV.png/96px-GrassIC_SV.png",
-  ice: "https://archives.bulbagarden.net/media/upload/thumb/1/13/IceIC_SV.png/96px-IceIC_SV.png",
-  fighting: "https://archives.bulbagarden.net/media/upload/thumb/0/0f/FightingIC_SV.png/96px-FightingIC_SV.png",
-  poison: "https://archives.bulbagarden.net/media/upload/thumb/9/9d/PoisonIC_SV.png/96px-PoisonIC_SV.png",
-  ground: "https://archives.bulbagarden.net/media/upload/thumb/f/f8/GroundIC_SV.png/96px-GroundIC_SV.png",
-  flying: "https://archives.bulbagarden.net/media/upload/thumb/d/d7/FlyingIC_SV.png/96px-FlyingIC_SV.png",
-  psychic: "https://archives.bulbagarden.net/media/upload/thumb/9/96/PsychicIC_SV.png/96px-PsychicIC_SV.png",
-  bug: "https://archives.bulbagarden.net/media/upload/thumb/d/d1/BugIC_SV.png/96px-BugIC_SV.png",
-  rock: "https://archives.bulbagarden.net/media/upload/thumb/3/32/RockIC_SV.png/96px-RockIC_SV.png",
-  ghost: "https://archives.bulbagarden.net/media/upload/thumb/2/2c/GhostIC_SV.png/96px-GhostIC_SV.png",
-  dragon: "https://archives.bulbagarden.net/media/upload/thumb/7/7f/DragonIC_SV.png/96px-DragonIC_SV.png",
-  dark: "https://archives.bulbagarden.net/media/upload/thumb/3/30/DarkIC_SV.png/96px-DarkIC_SV.png",
-  steel: "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SteelIC_SV.png/96px-SteelIC_SV.png",
-  fairy: "https://archives.bulbagarden.net/media/upload/thumb/c/c6/FairyIC_SV.png/96px-FairyIC_SV.png"
-};
+
 
 export default {
   name: "maquetteDynamiqueView",
@@ -117,49 +171,42 @@ methods: {
   
     
     const result = data.flavor_text_entries.filter(word => word.language.name == "en" &&  ( word.version.name == "sword" || word.version.name == "white-2"));
-    console.log(result)
+    
     return result[0].flavor_text
   },
   async gettypeImage() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/'+ this.$route.params.id)
     const data = await response.json()
   
-    console.log(data)
+    
     
     
     return data.types
   },
-  async GetbackgroundColor() {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ this.$route.params.id)
-    const data = await response.json()
-  
-    
-    return data.color.name
-  },
   
   },
   async created() {
-    console.log(this.$route.params.id)
+    
    
     this.poke = await this.getPokemon()
     this.description = await this.getDescription()
     this.Image = this.poke.sprites.other['official-artwork'].front_default
     
     const pokeCard = document.querySelector('section.poke-card')
-    const color = await this.GetbackgroundColor()
-    
+    const BackgroundName = document.querySelector('.background-name')
+    console.log(BackgroundName)
     this.poke.types.forEach(type => {
       console.log(type.type.name)
-      console.log(pokemonTypeImage[type.type.name])
+      console.log(pokemonColors[type.type.name].image)
       const typeImage = document.createElement('img')
-      typeImage.src = pokemonTypeImage[type.type.name]
+      typeImage.src = pokemonColors[type.type.name].image
       typeImage.alt = type.type.name
       document.querySelector('.type-img-list').appendChild(typeImage)
       
     });
-    console.log(color)
-    pokeCard.style.backgroundColor = pokemonColors[this.poke.types[0].type.name]
-    
+   
+    pokeCard.style.backgroundColor = pokemonColors[this.poke.types[0].type.name].background
+    BackgroundName.style.color = pokemonColors[this.poke.types[0].type.name].text
     
    
   },
@@ -392,7 +439,7 @@ div.main_infos {
    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #B22F30;
+    
 
     .bio_type{
       order: 3;
@@ -423,7 +470,7 @@ div.main_infos {
 
   section.poke-card {
     padding: 10px;
-
+    height: 190vh;
   }
 }
       
