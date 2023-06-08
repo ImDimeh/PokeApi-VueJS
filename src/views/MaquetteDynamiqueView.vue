@@ -12,7 +12,7 @@
       <a > {{ this.poke.name }}</a>
     </div>
     <div>
-      <img v-bind:src="'src/assets/logo-pokedex.png'">
+      <img v-bind:src="'../src/assets/logo-pokedex.png'">
     </div>
   </div>
   <section class="main_content">
@@ -194,10 +194,9 @@ methods: {
     
     const pokeCard = document.querySelector('section.poke-card')
     const BackgroundName = document.querySelector('.background-name')
-    console.log(BackgroundName)
+    
     this.poke.types.forEach(type => {
-      console.log(type.type.name)
-      console.log(pokemonColors[type.type.name].image)
+      
       const typeImage = document.createElement('img')
       typeImage.src = pokemonColors[type.type.name].image
       typeImage.alt = type.type.name
@@ -224,6 +223,7 @@ methods: {
 </script>
 
 <style lang="scss">
+
 strong{
   font-weight: bold;
 }
@@ -234,9 +234,13 @@ section.poke-card {
   background-color: #B22F30;
   height: 95vh;
   padding: 70px 60px;
+  padding-bottom: 10px;
   width:100%;
   margin-left: auto;
   margin-right: auto;
+
+  overflow: hidden;
+
   div.head {
     display: flex;
     flex-direction: row;
@@ -362,7 +366,7 @@ section.main_content{
       position: absolute;
     
     left: 50%;
-    transform: translate(-70%, -80%);
+    transform: translate(-50%, -80%);
     color: #8A0917;
     font-weight: bold;
     font-size: 7.5vw;
@@ -470,7 +474,7 @@ div.main_infos {
 
   section.poke-card {
     padding: 10px;
-    height: 190vh;
+    height: 90vh;
   }
 }
       
