@@ -12,7 +12,8 @@
          
             
           <div class="menu-item" v-for="(type) in type_list" :key="type.name">
-            <router-link to="/services/{{ data.name }}">{{ type.name }}</router-link>
+            
+            <a :href="'/type/' + type.name">{{ type.name }}</a>
           </div>
           
            
@@ -74,13 +75,13 @@ nav {
     flex-wrap: wrap;
     height: 428px;
     width: 312px;
-
-  
 }
   
 }
-
+  
 }
+
+
 .fade-enter-active, .fade-leave-active {
   transition: all 0.3s ease;
 }
