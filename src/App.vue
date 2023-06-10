@@ -1,26 +1,41 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import NavBarVue from './components/NavBarVue.vue'
 
+  
 </script>
 
 <template>
-
-
-
-      <nav>
-        <RouterLink to="/">Liste des Pokémon</RouterLink>
-        <RouterLink to="/type">TYPE</RouterLink>
-        <RouterLink to="/gen">génération</RouterLink>
-        <RouterLink to="/maquette">maquette de base </RouterLink>
-        <RouterLink to="/maquetteDynamique/:id">maquette dynamique </RouterLink>
-
-
-      </nav>
+  <div id="app">
+      <NavBarVue/>
     <router-view/>
-
-
-
+  </div>
 </template>
+
+<script>
+
+export default {
+  name: 'App',
+  components: {
+    NavBarVue
+  }
+}
+
+
+//   methods: {
+//     async GetAllTypes() {
+//       const response = await fetch('https://pokeapi.co/api/v2/type/')
+//       const data = await response.json()
+
+//       return data.results
+//     },
+//   },
+//   async created() { 
+//     const data = await this.GetAllTypes()
+//     console.log(data)
+//   }
+// }
+</script>
 
 <style lang="scss">
 
