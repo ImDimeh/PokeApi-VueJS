@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/maquetteDynamique/:id',
       name: 'maquetteDynamiqueView',
       component: () => import('../views/MaquetteDynamiqueView.vue')
+    },
+    {
+      path: '/type/:name',
+      name: 'TypePageView',
+      component: () => import('../views/TypePageView.vue')
     }
   ]
 })
