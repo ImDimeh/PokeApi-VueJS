@@ -1,6 +1,8 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router' 
 import NavBarVue from './components/NavBarVue.vue'
+
+import store from './store/index.js';
 
   
 </script>
@@ -14,27 +16,17 @@ import NavBarVue from './components/NavBarVue.vue'
 
 <script>
 
+
 export default {
   name: 'App',
   components: {
     NavBarVue
-  }
+  },
+  store,
 }
 
 
-//   methods: {
-//     async GetAllTypes() {
-//       const response = await fetch('https://pokeapi.co/api/v2/type/')
-//       const data = await response.json()
 
-//       return data.results
-//     },
-//   },
-//   async created() { 
-//     const data = await this.GetAllTypes()
-//     console.log(data)
-//   }
-// }
 </script>
 
 <style lang="scss">

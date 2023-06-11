@@ -10,6 +10,48 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    background-color: black;
   }
 }
 </style>
+<script>
+
+export default {
+  name: 'AboutView',
+
+  
+  data () {
+    return {
+      isOpen: false,
+      type_list: []
+    }
+      
+  },
+
+
+  
+
+
+    methods: {
+      getStoreList() {
+        return this.$store.state.firstTypeList
+      },
+    
+    },
+  
+  async created() { 
+    console.log('created')
+   
+    
+    
+  
+  },
+
+  mounted() {
+    console.log('mounted')
+    console.log(this.$store)
+  },
+}
+
+
+</script>

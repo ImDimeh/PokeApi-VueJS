@@ -61,9 +61,9 @@ export default {
     console.log(this.pokeOfType)
 
     // get background image of .banner_image
-    const bannerImage = document.querySelector('.banner-image')
-    const img = bannerImage.style.backgroundImage 
-    console.log(img)
+    // const bannerImage = document.querySelector('.banner-image')
+    // const img = bannerImage.style.backgroundImage 
+    // console.log(img)
 
   }
 }
