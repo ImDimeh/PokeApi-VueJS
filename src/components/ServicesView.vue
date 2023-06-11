@@ -12,7 +12,7 @@
          <div class="sub-menu" v-if="isOpen">
          
             
-          <div class="menu-item" v-for="(type) in type_list" :key="type.name">
+          <div class="menu-item" v-for="(type) in type_list" :key="type.name" >
             
             <a :href="'/type/' + type.name">{{ type.name }}</a>
           </div>
@@ -65,7 +65,7 @@ nav {
   .menu-item {
   .sub-menu {
       position: absolute;
-    background: #392ba2;
+    background: #000000;
     top: 100%;
     left: -219px;
     width: 100%;
@@ -83,6 +83,10 @@ nav {
     flex-wrap: wrap;
     height: 428px;
     width: 312px;
+    a {
+      color: white;
+      
+    }
 }
   
 }

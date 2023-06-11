@@ -60,10 +60,13 @@ export default {
     this.pokeOfType = await this.GetPokemonOfType()
     console.log(this.pokeOfType)
 
-    // get background image of .banner_image
-    // const bannerImage = document.querySelector('.banner-image')
-    // const img = bannerImage.style.backgroundImage 
-    // console.log(img)
+    const container = document.querySelector('.container')
+    console.log(this.$store.state.type_list[0][this.$route.params.name].background)
+    container.style.backgroundColor = this.$store.state.type_list[0][this.$route.params.name].background
+
+  //   const btn = document.querySelector('.fill')
+  //   console.log(this.$store.state.type_list[0][this.$route.params.name].text)
+  //  btn.style.backgroundColor = this.$store.state.type_list[0][this.$route.params.name].background
 
   }
 }
@@ -164,7 +167,7 @@ p {
 }
 
 .fill {
-  background: rgba(0, 212, 255, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   color: rgba(255,255,255,0.95);
   filter: drop-shadow(0);
   font-weight: bold;
